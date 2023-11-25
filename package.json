@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "author": "",
+  "keywords": [
+    "gatsby"
+  ],
+  "dependencies": {
+    "gatsby": "^4.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  }
+}
