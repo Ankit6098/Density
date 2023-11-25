@@ -47,6 +47,7 @@ const Cta = styled.div`
   justify-content: center;
   padding: 11.13222599029541px 33.39667892456055px;
   box-sizing: border-box;
+  // border-radius: 30px;
 `;
 const RectangleParent = styled.div`
   position: absolute;
@@ -55,10 +56,11 @@ const RectangleParent = styled.div`
   width: 876px;
   height: 142.6px;
   font-size: 38.27px;
+  border-radius: 5px;
 `;
 const GetStartedNowParent = styled.div`
   position: relative;
-  width: 1011px;
+  width: 1100px;
   height: 1228.6px;
 `;
 const LandingPageInnerRoot = styled.div`

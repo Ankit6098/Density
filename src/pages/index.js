@@ -174,6 +174,7 @@ const LandingPageRoot = styled.div`
   font-size: var(--font-size-14xl-5);
   color: var(--white);
   font-family: var(--mobile-caption-1-medium);
+  background: black;
 `;
 
 const LandingPage = () => {

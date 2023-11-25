@@ -11,6 +11,11 @@ const FrameIcon = styled.img`
 const Career = styled.div`
   position: relative;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: var(--electric-green-primary);
+  }
+  font-size: 12px;
 `;
 const CareerParent = styled.div`
   display: flex;

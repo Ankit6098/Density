@@ -32,6 +32,7 @@ const AsSomeoneWhos = styled.div`
 `;
 const Prakash = styled.p`
   margin: 0;
+  height: 2rem;
 `;
 const PrakashJamatia = styled.b`
   position: absolute;

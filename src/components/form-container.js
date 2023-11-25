@@ -6,41 +6,7 @@ const FooterChild = styled.img`
   width: 127.3px;
   height: 29.3px;
 `;
-const Fees = styled.div`
-  position: absolute;
-  top: 0px;
-  left: 83.4px;
-`;
-const Blog = styled.div`
-  position: absolute;
-  top: 0px;
-  left: 0px;
-`;
-const Leaderboard = styled.div`
-  position: absolute;
-  top: 0px;
-  left: 168.2px;
-`;
-const ContactUs = styled.div`
-  position: absolute;
-  top: 0px;
-  left: 413px;
-`;
-const Careers = styled.div`
-  position: absolute;
-  top: 0px;
-  left: 307px;
-`;
-const PrivacyPolicy = styled.div`
-  position: absolute;
-  top: 0px;
-  left: 539.2px;
-`;
-const FeesParent = styled.div`
-  position: relative;
-  width: 628.2px;
-  height: 17px;
-`;
+
 const LremIpsumOd = styled.div`
   position: relative;
   line-height: 24px;
@@ -77,19 +43,40 @@ const FooterRoot = styled.div`
   font-family: var(--mobile-caption-1-medium);
 `;
 
+const FooterLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+  text-align: left;
+  font-size: 11px;
+  color: var(--neutrals-grey-61);
+`;
+
+const Links = styled.a`
+  color: var(--color-gainsboro-100);
+  text-decoration: none;
+  &:hover {
+    color: var(--electric-green-primary);
+  }
+  
+  transition: all 0.2s ease-in-out;
+`;
+
 const FormContainer = () => {
   return (
     <FooterRoot>
       <FooterChild alt="" src="/group-626657.svg" />
       <GroupParent>
-        <FeesParent>
-          <Fees>Fees</Fees>
-          <Blog>Blog</Blog>
-          <Leaderboard>Leaderboard</Leaderboard>
-          <ContactUs>Contact Us</ContactUs>
-          <Careers>Careers</Careers>
-          <PrivacyPolicy>Privacy Policy</PrivacyPolicy>
-        </FeesParent>
+        <FooterLinks>
+          <Links>Blog</Links>
+          <Links>Fees</Links>
+          <Links>Leaderboard</Links>
+          <Links>Careers</Links>
+          <Links>Contact Us</Links>
+          <Links>Privacy Policy</Links>
+        </FooterLinks>
         <LremIpsumOd>{`Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska. Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och pesask vyfisat. Viktiga poddradio har un mad och inde. `}</LremIpsumOd>
       </GroupParent>
       <FooterItem alt="" src="/group-2007.svg" />
