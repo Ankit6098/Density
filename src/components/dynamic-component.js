@@ -49,6 +49,11 @@ const LandingPageInnerRoot = styled.div`
   color: var(--electric-green-primary);
   font-family: var(--mobile-caption-1-medium);
   background: black;
+  @media (max-width: 1050px) {
+    width: 75%;
+    padding: 0px;
+    margin: 0 auto;
+  }
 `;
 
 const DynamicComponent = () => {

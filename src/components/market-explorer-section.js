@@ -109,6 +109,7 @@ const ExploreMarketsWrapper = styled.div`
   box-sizing: border-box;
   font-size: var(--mobile-title-3-medium-size);
   color: var(--color-black);
+  cursor: pointer;
 `;
 const FrameParentRoot = styled.div`
   align-self: stretch;

@@ -95,11 +95,12 @@ const FrameChild = styled.img`
   opacity: 0.04;
 `;
 const AsSomeoneWhosAlwaysLookinParent = styled.div`
-  flex: 1;
+  // flex: 1;
   position: relative;
   background-color: var(--color-whitesmoke);
   height: 450px;
   overflow: hidden;
+  width: 400px;
 `;
 const Unsplasho5nbw8gtnmcIcon = styled.img`
   position: absolute;
@@ -127,6 +128,10 @@ const FrameGroup = styled.div`
   text-align: left;
   font-size: var(--font-size-xl);
   color: var(--neutrals-grey-61);
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const FrameParentRoot = styled.div`
   align-self: stretch;

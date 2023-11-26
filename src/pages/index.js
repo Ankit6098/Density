@@ -145,11 +145,17 @@ const TextureIcon = styled.img`
   width: 1130px;
   object-fit: cover;
   mix-blend-mode: overlay;
+  @media (max-width: 1050px) {
+    width: 100px;
+  }
 `;
 const FrameGroup = styled.div`
   position: relative;
   width: 1130px;
   height: 510px;
+  @media (max-width: 1050px) {
+    // width: -100px;
+  }
 `;
 const FrameParent = styled.div`
   align-self: stretch;

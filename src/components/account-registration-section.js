@@ -50,6 +50,7 @@ const TradeNowWrapper = styled.div`
   box-sizing: border-box;
   font-size: var(--mobile-title-3-medium-size);
   color: var(--color-black);
+  cursor: pointer;
 `;
 const FrameParent = styled.div`
   display: flex;
@@ -76,6 +77,9 @@ const GroupParentRoot = styled.div`
   color: var(--white);
   font-family: var(--mobile-caption-1-medium);
   width: ${(p) => p.propWidth};
+  @media (max-width: 1050px) {
+    flex-direction: column;
+  }
 `;
 
 const AccountRegistrationSection = ({

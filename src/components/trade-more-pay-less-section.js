@@ -77,7 +77,8 @@ const Image92Icon = styled.img`
   opacity: 0.5;
 `;
 const FrameContainer = styled.div`
-  flex: 1;
+  // flex: 1;
+  width: 400px;
   position: relative;
   background-color: var(--neutrals-grey-9);
   height: 438px;
@@ -155,7 +156,8 @@ const TextureIcon = styled.img`
   mix-blend-mode: overlay;
 `;
 const FrameDiv = styled.div`
-  flex: 1;
+  // flex: 1;
+  width: 400px;
   position: relative;
   background: linear-gradient(
     179.64deg,
@@ -187,6 +189,9 @@ const FrameGroup = styled.div`
   gap: var(--gap-xl);
   text-align: left;
   font-size: var(--font-size-13xl);
+  @media (max-width: 1050px) {
+    flex-direction: column;
+  }
 `;
 const FrameParentRoot = styled.div`
   align-self: stretch;

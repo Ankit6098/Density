@@ -68,6 +68,9 @@ const FrameGroup = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: var(--font-size-13xl);
+  @media (max-width: 1050px) {
+    width: 90%;
+  }
 `;
 const JoinCommunity = styled.b`
   position: relative;

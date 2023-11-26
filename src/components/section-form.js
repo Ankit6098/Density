@@ -9,6 +9,10 @@ const GetStartedNow = styled.b`
   background: linear-gradient(176.64deg, #fff, rgba(255, 255, 255, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media (max-width: 1050px) {
+    font-size: 6rem;
+    left: calc(47% - 300px);
+  }
 `;
 const GroupChild = styled.img`
   position: absolute;
@@ -57,11 +61,18 @@ const RectangleParent = styled.div`
   height: 142.6px;
   font-size: 38.27px;
   border-radius: 5px;
+  @media (max-width: 1050px) {
+    left: 30px
+  }
 `;
 const GetStartedNowParent = styled.div`
   position: relative;
   width: 1100px;
   height: 1228.6px;
+  @media (max-width: 1050px) {
+    width: 90%;
+    margin: 0 auto;
+  }
 `;
 const LandingPageInnerRoot = styled.div`
   align-self: stretch;

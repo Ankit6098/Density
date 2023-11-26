@@ -84,6 +84,9 @@ const FrameContainer = styled.div`
   height: 323px;
   overflow: hidden;
   flex-shrink: 0;
+  @media (max-width: 1050px) {
+    width: 30%;
+  }
 `;
 const InviteFriendsTo = styled.b`
   position: absolute;
@@ -128,6 +131,11 @@ const FrameGroup = styled.div`
   justify-content: flex-start;
   gap: var(--gap-mini);
   font-size: var(--font-size-13xl);
+  @media (max-width: 1050px) {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
 `;
 const StartEarningNow = styled.b`
   position: relative;

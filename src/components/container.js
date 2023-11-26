@@ -37,6 +37,12 @@ const FrameParentRoot = styled.div`
   font-size: var(--font-size-13xl);
   color: var(--white);
   font-family: var(--mobile-caption-1-medium);
+  @media (max-width: 1050px) {
+    width: 75%;
+    padding: 0px;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
 `;
 
 const Container = () => {

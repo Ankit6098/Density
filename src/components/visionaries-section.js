@@ -126,6 +126,11 @@ const FrameGroup = styled.div`
   gap: var(--gap-5xl);
   text-align: left;
   font-size: var(--font-size-13xl);
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 const FrameParentRoot = styled.div`
   align-self: stretch;
