@@ -11,7 +11,7 @@ const GetStartedNow = styled.b`
   -webkit-text-fill-color: transparent;
   @media (max-width: 1050px) {
     font-size: 6rem;
-    left: calc(47% - 300px);
+    left: calc(42% - 300px);
   }
 `;
 const GroupChild = styled.img`
@@ -20,6 +20,9 @@ const GroupChild = styled.img`
   left: 225.3px;
   width: 557.3px;
   height: 1124.4px;
+  @media (max-width: 1050px) {
+    left: 170px;
+  }
 `;
 const GroupItem = styled.div`
   position: absolute;
@@ -51,7 +54,7 @@ const Cta = styled.div`
   justify-content: center;
   padding: 11.13222599029541px 33.39667892456055px;
   box-sizing: border-box;
-  // border-radius: 30px;
+  // border-radius: 20px;
 `;
 const RectangleParent = styled.div`
   position: absolute;
@@ -62,7 +65,7 @@ const RectangleParent = styled.div`
   font-size: 38.27px;
   border-radius: 5px;
   @media (max-width: 1050px) {
-    left: 30px
+    left: 5px
   }
 `;
 const GetStartedNowParent = styled.div`

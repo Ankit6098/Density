@@ -10,6 +10,9 @@ const ConversionFee = styled.div`
   line-height: 26px;
   font-weight: 500;
   color: var(--color-darkgray-100);
+  @media (max-width: 1050px) {
+    font-size: 0.8rem;
+  }
 `;
 const MnParent = styled.div`
   flex: 1;
@@ -36,6 +39,9 @@ const FrameParent = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 1050px) {
+    font-size: 2rem;
+  }
 `;
 const LandingPageInnerRoot = styled.div`
   align-self: stretch;
@@ -50,7 +56,7 @@ const LandingPageInnerRoot = styled.div`
   font-family: var(--mobile-caption-1-medium);
   background: black;
   @media (max-width: 1050px) {
-    width: 75%;
+    width: 80%;
     padding: 0px;
     margin: 0 auto;
   }

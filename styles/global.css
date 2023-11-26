@@ -3,7 +3,23 @@
 body {
   margin: 0;
   line-height: normal;
+  overflow-x: hidden;
 }
+
+/* window scrollbar */
+/* ::-webkit-scrollbar {
+  width: 16px;
+  background-color: #1b1b1f;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid transparent;
+  border-radius: 100px;
+  background-color: #44582c;
+  background-image: linear-gradient(to top, #d4f938, #b2f346, #90ec55, #6de462, #44db6f);
+  background-clip: content-box;
+} */
+
 :root {
   /* fonts */
   --mobile-caption-1-medium: "Inter", sans-serif;

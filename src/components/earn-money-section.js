@@ -35,7 +35,7 @@ const GroupParent = styled.div`
   align-items: center;
   justify-content: center;
   gap: var(--gap-21xl);
-  text-align: center;
+  text-align: center; 
 `;
 const FrameIcon = styled.img`
   position: absolute;
@@ -86,6 +86,7 @@ const FrameContainer = styled.div`
   flex-shrink: 0;
   @media (max-width: 1050px) {
     width: 30%;
+    font-size: 1.5rem;
   }
 `;
 const InviteFriendsTo = styled.b`

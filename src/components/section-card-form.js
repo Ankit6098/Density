@@ -45,6 +45,10 @@ const OurAssetsLiquidity = styled.div`
   font-size: 15.75px;
   line-height: 23.63px;
   color: var(--neutrals-grey-61);
+  @media (max-width: 1050px) {
+    font-size: 0.9rem;
+    width: 85%;
+  }
 `;
 const DepositBonusParent = styled.div`
   position: absolute;
@@ -56,6 +60,10 @@ const DepositBonusParent = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   gap: 16.88px;
+  @media (max-width: 1050px) {
+    font-size: 2.5rem;
+    width: 85%;
+  }
 `;
 const TextureIcon = styled.img`
   position: absolute;
@@ -90,6 +98,10 @@ const DedicatedRelationshipManagerContainer = styled.b`
   position: relative;
   letter-spacing: -1.69px;
   line-height: 50.63px;
+  @media (max-width: 1050px) {
+    font-size: 2.5rem;
+    width: 85%;
+  }
 `;
 const DedicatedRelationshipManagerParent = styled.div`
   position: absolute;
