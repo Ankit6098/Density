@@ -1,5 +1,5 @@
 
-# <img src="https://density-rust.vercel.app/frame.svg" width="36" height="36" alt="Density" /> Density
+# <img src="https://density-rust.vercel.app/frame.svg" width="60" height="60" alt="Density" /> Density
 
 The Density Company frontend project, developed using the Gatsby framework and hosted on Vercel, offers a highly responsive and optimized web experience. Leveraging Gatsby's static site generation and React components, the application ensures fast load times and scalability. The user interface, designed for Density Company, provides information about the company's products or services and features a responsive design for seamless accessibility across devices. With Vercel's hosting, the project benefits from efficient deployment and continuous updates, contributing to a reliable and visually appealing online presence for Density Company.
 
