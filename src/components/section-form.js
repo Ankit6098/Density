@@ -54,7 +54,13 @@ const Cta = styled.div`
   justify-content: center;
   padding: 11.13222599029541px 33.39667892456055px;
   box-sizing: border-box;
-  // border-radius: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-image: linear-gradient(to right, #36d370, #64de64, #8ae856, #aff147, #d4f938);
+    transform: scale(1.02);
+  }
 `;
 const RectangleParent = styled.div`
   position: absolute;

@@ -92,6 +92,7 @@ const FrameContainer = styled.div`
   background-color: var(--color-whitesmoke);
   height: 450px;
   overflow: hidden;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 `;
 const DedicatedRelationshipManagerContainer = styled.b`
   align-self: stretch;

@@ -84,6 +84,7 @@ const FrameContainer = styled.div`
   height: 323px;
   overflow: hidden;
   flex-shrink: 0;
+  border-radius: 5px;
   @media (max-width: 1050px) {
     width: 30%;
     font-size: 1.5rem;
@@ -156,6 +157,7 @@ const StartEarningNowWrapper = styled.div`
   box-sizing: border-box;
   font-size: var(--mobile-title-3-medium-size);
   color: var(--color-black);
+  cursor: pointer;
 `;
 const FrameParentRoot = styled.div`
   align-self: stretch;

@@ -101,6 +101,8 @@ const AsSomeoneWhosAlwaysLookinParent = styled.div`
   height: 450px;
   overflow: hidden;
   width: 400px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 `;
 const Unsplasho5nbw8gtnmcIcon = styled.img`
   position: absolute;
@@ -123,7 +125,7 @@ const FrameGroup = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   gap: var(--gap-xl);
   text-align: left;
   font-size: var(--font-size-xl);
