@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TradeTogether = styled.span``;
 const ThriveTogether = styled.span`
@@ -112,9 +115,17 @@ const FrameParentRoot = styled.div`
 `;
 
 const TradeTogetherSection = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }
+  , []);
+
   return (
     <FrameParentRoot>
-      <FrameWrapper>
+      <FrameWrapper data-aos="fade-zoom-in">
         <TradeTogetherThriveTogetheParent>
           <TradeTogetherThriveContainer>
             <TradeTogether>{`Trade Together. `}</TradeTogether>
@@ -125,7 +136,7 @@ const TradeTogetherSection = () => {
           </JoinTheFunFilled>
         </TradeTogetherThriveTogetheParent>
       </FrameWrapper>
-      <FrameGroup>
+      <FrameGroup data-aos="fade-zoom-in">
         <MnParent>
           <B>10,000+</B>
           <Traders>Traders</Traders>
@@ -146,7 +157,7 @@ const TradeTogetherSection = () => {
           <Traders>Signals</Traders>
         </MnParent>
       </FrameGroup>
-      <JoinCommunityWrapper>
+      <JoinCommunityWrapper data-aos="fade-zoom-in">
         <JoinCommunity>Join community</JoinCommunity>
       </JoinCommunityWrapper>
     </FrameParentRoot>

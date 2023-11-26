@@ -1,6 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 import AccountRegistrationSection from "./account-registration-section";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const DerivatesMadeSimple = styled.p`
   margin: 0;
@@ -50,6 +53,13 @@ const DerivatesMadeSimpleIn3EasParentRoot = styled.div`
 `;
 
 const SectionCard = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <DerivatesMadeSimpleIn3EasParentRoot>
       <DerivatesMadeSimpleContainer>
@@ -60,12 +70,13 @@ const SectionCard = () => {
           <Steps> Steps</Steps>
         </DerivatesMadeSimple>
       </DerivatesMadeSimpleContainer>
-      <FrameParent>
+      <FrameParent data-aos="fade-zoom-in">
         <AccountRegistrationSection
           group626793="/group-626793.svg"
           group1000003801="/group-1000003801.svg"
           createAnAccount="Create an Account"
           registerCompleteYourVerif={`Register & Complete your Verification in less than 2 minutes`}
+          data-aos="fade-zoom-in"
         />
         <FrameChild alt="" src="/vector-5.svg" />
         <AccountRegistrationSection
@@ -76,6 +87,7 @@ const SectionCard = () => {
           propWidth="1446px"
           propWidth1="107.1px"
           propHeight="100px"
+          data-aos="fade-zoom-in"
         />
         <FrameChild alt="" src="/vector-6.svg" />
         <AccountRegistrationSection
@@ -86,6 +98,7 @@ const SectionCard = () => {
           propWidth="1442px"
           propWidth1="115.8px"
           propHeight="120px"
+          data-aos="fade-zoom-in"
         />
       </FrameParent>
     </DerivatesMadeSimpleIn3EasParentRoot>

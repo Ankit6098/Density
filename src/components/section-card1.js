@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BackedByThe = styled.b`
   position: relative;
@@ -143,15 +146,22 @@ const FrameParentRoot = styled.div`
 `;
 
 const SectionCard1 = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <FrameParentRoot>
-      <FrameWrapper>
+      <FrameWrapper data-aos="fade-zoom-in">
         <FrameWrapper>
           <BackedByThe>Backed by the Best.</BackedByThe>
         </FrameWrapper>
       </FrameWrapper>
       <FrameGroup>
-        <Image109Parent>
+        <Image109Parent data-aos="fade-zoom-in">
           <Image109Icon alt="" src="/image-109@2x.png" />
           <Image110Icon alt="" src="/image-110@2x.png" />
           <Image111Icon alt="" src="/image-111@2x.png" />
@@ -160,7 +170,7 @@ const SectionCard1 = () => {
           <Image114Icon alt="" src="/image-114@2x.png" />
           <Image115Icon alt="" src="/image-115@2x.png" />
         </Image109Parent>
-        <FrameContainer>
+        <FrameContainer data-aos="fade-zoom-in">
           <UtsavsomaniBackgroundRemovedParent>
             <UtsavsomaniBackgroundRemoved
               alt=""

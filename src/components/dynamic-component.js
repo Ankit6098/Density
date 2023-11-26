@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const B = styled.b`
   position: relative;
@@ -63,8 +66,15 @@ const LandingPageInnerRoot = styled.div`
 `;
 
 const DynamicComponent = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
-    <LandingPageInnerRoot>
+    <LandingPageInnerRoot data-aos="fade-zoom-in">
       <FrameParent>
         <MnParent>
           <B>00%</B>

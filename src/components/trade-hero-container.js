@@ -1,5 +1,8 @@
 import * as React from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ItsTimeTo = styled.p`
   margin: 0 auto;
@@ -178,9 +181,15 @@ const HeroRoot = styled.div`
 `;
 
 const TradeHeroContainer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <HeroRoot>
-      <GroupParent>
+      <GroupParent data-aos="fade-zoom-in">
         <ItsTimeToTradeTheFutureParent>
           <ItsTimeToContainer>
             <ItsTimeTo>It’s time to trade,</ItsTimeTo>
@@ -191,12 +200,12 @@ const TradeHeroContainer = () => {
           </ItsTimeToContainer>
           <Future1>future.</Future1>
         </ItsTimeToTradeTheFutureParent>
-        <DerivatesMadeSimple>Derivates made simple!</DerivatesMadeSimple>
+        <DerivatesMadeSimple data-aos="fade-zoom-in">Derivates made simple!</DerivatesMadeSimple>
         <TradeBtcEth>
           Trade BTC, ETH Futures with 125x leverage and earn rewards.
         </TradeBtcEth>
       </GroupParent>
-      <Iphone14ProSpaceBlackMockParent>
+      <Iphone14ProSpaceBlackMockParent data-aos="fade-zoom-in">
         <Iphone14ProSpaceBlackMock>
           <ShadowIcon alt="" src="/shadow@2x.png" />
           <MainIcon alt="" src="/main@2x.png" />

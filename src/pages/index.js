@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useEffect } from "react";
 import Header from "../components/header";
 import TradeHeroContainer from "../components/trade-hero-container";
 import DynamicComponent from "../components/dynamic-component";
@@ -18,6 +19,9 @@ import TradeTogetherSection from "../components/trade-together-section";
 import VisionariesSection from "../components/visionaries-section";
 import SectionForm from "../components/section-form";
 import FormContainer from "../components/form-container";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const GroupChild = styled.img`
   position: absolute;
@@ -102,7 +106,7 @@ const GroupParent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-101xl) 0px 240px;
+  padding: var(--padding-101xl) 0px 100px;
   gap: var(--gap-101xl);
   // background-color: black;
 `;
@@ -184,6 +188,13 @@ const LandingPageRoot = styled.div`
 `;
 
 const LandingPage = () => {
+
+  useEffect(() => {
+    AOS.init({
+      // Global settings for AOS here (if needed)
+    });
+  }, []);
+
   return (
     <LandingPageRoot>
       <Header />
@@ -194,7 +205,7 @@ const LandingPage = () => {
           <GroupChild alt="" src="/group-1000003808.svg" />
           <GroupItem />
           <GroupInner />
-          <GroupDiv>
+          <GroupDiv data-aos="fade-zoom-in">
             <GroupIcon alt="" src="/group-18145967.svg" />
             <OneAppEndlessContainer>
               <OneApp>One App.</OneApp>
@@ -209,7 +220,7 @@ const LandingPage = () => {
       <TradeMorePayLessSection />
       <MarketExplorerSection />
       <FrameParent>
-        <UnlockNewFrontiersParent>
+        <UnlockNewFrontiersParent data-aos="fade-zoom-in">
           <UnlockNewFrontiersContainer>
             <Unlock>Unlock</Unlock>
             <Span>{` `}</Span>

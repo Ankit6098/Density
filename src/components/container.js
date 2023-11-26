@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Same = styled.p`
   margin: 0;
@@ -46,8 +49,15 @@ const FrameParentRoot = styled.div`
 `;
 
 const Container = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
-    <FrameParentRoot>
+    <FrameParentRoot data-aos="fade-zoom-in">
       <SameStrategiesWrapper>
         <SameStrategies>
           <Same>Same</Same>

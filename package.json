@@ -8,12 +8,12 @@
     "gatsby"
   ],
   "dependencies": {
+    "aos": "^2.3.4",
     "gatsby": "^4.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.10"
   },
-  "devDependencies": {},
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",

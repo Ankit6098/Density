@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const VectorIcon = styled.img`
   position: absolute;
@@ -173,6 +176,13 @@ const VectorParentRoot = styled.div`
 `;
 
 const ContainerCard = () => {
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <VectorParentRoot>
       <VectorIcon alt="" src="/vector.svg" />
@@ -185,7 +195,7 @@ const ContainerCard = () => {
       <GroupChild1 />
       <GroupChild2 />
       <GroupChild3 />
-      <IsNowHereForYouParent>
+      <IsNowHereForYouParent data-aos="fade-zoom-in">
         <IsNowHereContainer>
           <IsNowHere>{`Is now here, `}</IsNowHere>
           <IsNowHere>for you.</IsNowHere>

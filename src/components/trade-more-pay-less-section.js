@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TradeMore = styled.span``;
 const PayLess = styled.span`
@@ -210,16 +213,23 @@ const FrameParentRoot = styled.div`
 `;
 
 const TradeMorePayLessSection = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
-    <FrameParentRoot>
-      <TradeMorePayLessParent>
+    <FrameParentRoot data-aos="fade-zoom-in">
+      <TradeMorePayLessParent data-aos="fade-zoom-in">
         <TradeMorePayContainer>
           <TradeMore>{`Trade More. `}</TradeMore>
           <PayLess>Pay Less.</PayLess>
         </TradeMorePayContainer>
         <OurLowFees>Our low Fees Supercharge Your Profits</OurLowFees>
       </TradeMorePayLessParent>
-      <FrameGroup>
+      <FrameGroup data-aos="fade-zoom-in">
         <FrameContainer>
           <FrameIcon alt="" src="/frame1.svg" />
           <Parent1>

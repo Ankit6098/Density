@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const GroupChild = styled.img`
   position: absolute;
@@ -203,8 +206,15 @@ const FrameParentRoot = styled.div`
 `;
 
 const CryptoCard = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
-    <FrameParentRoot>
+    <FrameParentRoot data-aos="fade-zoom-in">
       <GroupParent>
         <VectorParent>
           <GroupChild alt="" src="/vector-1176.svg" />

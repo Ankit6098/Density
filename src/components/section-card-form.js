@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const StartSmallEarn = styled.b`
   position: relative;
@@ -160,16 +163,23 @@ const FrameParentRoot = styled.div`
 `;
 
 const SectionCardForm = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <FrameParentRoot>
-      <StartSmallEarnBigParent>
+      <StartSmallEarnBigParent data-aos="fade-zoom-in">
         <StartSmallEarn>Start Small. Earn Big.</StartSmallEarn>
         <DeposityAMinimum>
           Deposity a minimum of 1000 and get a Deposit bonus + dedicagted
           relationship manager
         </DeposityAMinimum>
       </StartSmallEarnBigParent>
-      <FrameGroup>
+      <FrameGroup data-aos="fade-zoom-in">
         <FrameContainer>
           <Icon alt="" src="/25-2.svg" />
           <DepositBonusParent>

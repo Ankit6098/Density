@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MeetThe = styled.span``;
 const Visionaries = styled.span`
@@ -151,9 +154,17 @@ const FrameParentRoot = styled.div`
 `;
 
 const VisionariesSection = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }
+  , []);
+
   return (
     <FrameParentRoot>
-      <FrameWrapper>
+      <FrameWrapper data-aos="fade-zoom-in">
         <MeetTheVisionariesBehindDeParent>
           <MeetTheVisionariesContainer>
             <MeetThe>{`Meet the `}</MeetThe>
@@ -165,7 +176,7 @@ const VisionariesSection = () => {
           </NoComplexityOf>
         </MeetTheVisionariesBehindDeParent>
       </FrameWrapper>
-      <FrameGroup>
+      <FrameGroup data-aos="fade-zoom-in">
         <FrameContainer>
           <FrameIcon alt="" src="/frame5.svg" />
           <AakashNeerajMittal>Aakash Neeraj Mittal</AakashNeerajMittal>

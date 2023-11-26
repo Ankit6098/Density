@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const GetStartedNow = styled.b`
   position: absolute;
@@ -98,12 +101,20 @@ const LandingPageInnerRoot = styled.div`
 `;
 
 const SectionForm = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }
+  , []);
+
   return (
     <LandingPageInnerRoot>
       <GetStartedNowParent>
-        <GetStartedNow>Get started now.</GetStartedNow>
-        <GroupChild alt="" src="/group-1000003804.svg" />
-        <RectangleParent>
+        <GetStartedNow data-aos="fade-zoom-in">Get started now.</GetStartedNow>
+        <GroupChild alt="" src="/group-1000003804.svg" data-aos="fade-zoom-in"/>
+        <RectangleParent data-aos="fade-zoom-in">
           <GroupItem />
           <Cta>
             <StartTrading>Start Trading!</StartTrading>

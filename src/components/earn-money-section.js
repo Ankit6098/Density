@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FrameChild = styled.img`
   position: relative;
@@ -175,9 +178,17 @@ const FrameParentRoot = styled.div`
 `;
 
 const EarnMoneySection = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }
+  , []);
+
   return (
     <FrameParentRoot>
-      <GroupParent>
+      <GroupParent data-aos="fade-zoom-in">
         <FrameChild alt="" src="/group-1000003819.svg" />
         <EarnMoneyTheEasyWayParent>
           <EarnMoneyTheContainer>
@@ -189,7 +200,7 @@ const EarnMoneySection = () => {
           </NoComplexityOf>
         </EarnMoneyTheEasyWayParent>
       </GroupParent>
-      <FrameGroup>
+      <FrameGroup data-aos="fade-zoom-in">
         <FrameContainer>
           <FrameIcon alt="" src="/frame5.svg" />
           <ShareYourYour>Share your your referral link</ShareYourYour>
@@ -212,7 +223,7 @@ const EarnMoneySection = () => {
           <TextureIcon alt="" src="/texture6@2x.png" />
         </FrameContainer>
       </FrameGroup>
-      <StartEarningNowWrapper>
+      <StartEarningNowWrapper data-aos="fade-zoom-in">
         <StartEarningNow>start earning now</StartEarningNow>
       </StartEarningNowWrapper>
     </FrameParentRoot>

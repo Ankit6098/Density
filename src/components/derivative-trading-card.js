@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const VectorIcon = styled.img`
   position: absolute;
@@ -96,13 +99,20 @@ const VectorParentRoot = styled.div`
 `;
 
 const DerivativeTradingCard = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <VectorParentRoot>
       <VectorIcon alt="" src="/vector.svg" />
       <VectorIcon1 alt="" src="/vector1.svg" />
       <GroupChild />
       <GroupItem />
-      <GroupParent>
+      <GroupParent data-aos="fade-zoom-in">
         <GroupInner alt="" src="/group-18145968.svg" />
         <FutureOfDerivativeContainer>
           <FutureOf>{`Future of `}</FutureOf>

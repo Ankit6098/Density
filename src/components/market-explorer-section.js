@@ -1,6 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 import ContainerCardForm from "./container-card-form";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ExploreTheMarkets = styled.p`
   margin: 0;
@@ -128,9 +131,16 @@ const FrameParentRoot = styled.div`
 `;
 
 const MarketExplorerSection = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
-    <FrameParentRoot>
-      <ExploreTheMarketsLikeItIsParent>
+    <FrameParentRoot data-aos="fade-zoom-in">
+      <ExploreTheMarketsLikeItIsParent data-aos="fade-zoom-in">
         <ExploreTheMarketsContainer>
           <ExploreTheMarkets>Explore the Markets</ExploreTheMarkets>
           <ExploreTheMarkets>
@@ -138,11 +148,11 @@ const MarketExplorerSection = () => {
             <Playground>Playground.</Playground>
           </ExploreTheMarkets>
         </ExploreTheMarketsContainer>
-        <SearchForYour>
+        <SearchForYour data-aos="fade-zoom-in">
           Search for your favorite coins and stay ahead of the market
         </SearchForYour>
       </ExploreTheMarketsLikeItIsParent>
-      <RectangleParent>
+      <RectangleParent data-aos="fade-zoom-in">
         <RectangleIcon alt="" src="/rectangle@2x.png" />
         <ChartIcon alt="" src="/chart.svg" />
         <GroupChild alt="" src="/vector-1173.svg" />
@@ -186,7 +196,7 @@ const MarketExplorerSection = () => {
         </FrameGroup>
         <TextureIcon alt="" src="/texture1@2x.png" />
       </RectangleParent>
-      <ExploreMarketsWrapper>
+      <ExploreMarketsWrapper data-aos="fade-zoom-in">
         <ExploreMarkets>Explore Markets</ExploreMarkets>
       </ExploreMarketsWrapper>
     </FrameParentRoot>

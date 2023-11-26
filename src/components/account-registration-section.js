@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FrameChild = styled.img`
   position: relative;
@@ -91,6 +94,14 @@ const AccountRegistrationSection = ({
   propWidth1,
   propHeight,
 }) => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }
+  , []);
+
   return (
     <GroupParentRoot propWidth={propWidth}>
       <FrameChild alt="" src={group626793} />
@@ -106,7 +117,7 @@ const AccountRegistrationSection = ({
             <CreateAnAccount>{createAnAccount}</CreateAnAccount>
             <RegisterComplete>{registerCompleteYourVerif}</RegisterComplete>
           </CreateAnAccountParent>
-          <TradeNowWrapper>
+          <TradeNowWrapper data-aos="fade-zoom-in">
             <TradeNow>Trade Now</TradeNow>
           </TradeNowWrapper>
         </FrameParent>

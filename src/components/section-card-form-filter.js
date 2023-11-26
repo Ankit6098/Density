@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const DontTakeOur = styled.b`
   position: relative;
@@ -29,6 +32,7 @@ const AsSomeoneWhos = styled.div`
   line-height: 28px;
   display: inline-block;
   width: 303px;
+  font-size: 1rem;
 `;
 const Prakash = styled.p`
   margin: 0;
@@ -152,16 +156,23 @@ const FrameParentRoot = styled.div`
 `;
 
 const SectionCardFormFilter = () => {
+
+  useEffect(() => {
+    AOS.init({
+        duration: 2000,
+    });
+  }, []);
+
   return (
     <FrameParentRoot>
-      <DontTakeOurWordForItParent>
+      <DontTakeOurWordForItParent data-aos="fade-zoom-in">
         <DontTakeOur>Don’t take our word for it.</DontTakeOur>
         <HearItFrom>
           Hear it from our expert community of traders who have made insane
           amounts in a short amount of time
         </HearItFrom>
       </DontTakeOurWordForItParent>
-      <FrameGroup>
+      <FrameGroup data-aos="fade-zoom-in">
         <AsSomeoneWhosAlwaysLookinParent>
           <AsSomeoneWhos>
             As someone who's always looking for the next big thing, I was really
